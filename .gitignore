@@ -43,4 +43,10 @@ env.bak/
 venv.bak/
 
 ./static/*
-/static/*
+/static/
+password_generator/static/*
+*.js
+*.svg
+*.css
+*.woff
+
