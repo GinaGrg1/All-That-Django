@@ -1,0 +1,10 @@
+<h1> This is the Blog Page</h1>
+
+<h2>There are {{ total }} blog{{ total|pluralize }} in total.</h2>
+{% for blog in all_blogs_fields %}
+    <a href="{% url 'blog:details' blog.id %}"><h2>{{ blog.title }}</h2></a>
+    <h5>{{ blog.date|date:'d M Y' }}</h5>
+    <p>{{ blog.content|striptags|truncatechars:100 }}</p>
+{% endfor %}
+
+<a href="{% url 'home' %}">Home</a>
