@@ -25,11 +25,11 @@
 
     {% if project.url %}
     <a href="{{ project.url }}">
-      <img src="{{ project.image.url }}" class="img-fluid mb-2">
+      <img src="{{ project.image.url }}" class="img-fluid mb-2" style="width:14em; height:14em;">
     </a>
     {% else %}
 
-    <img src="{{ project.image.url }}" class="img-fluid mb-2">
+    <img src="{{ project.image.url }}" class="img-fluid mb-2" style="width:14em; height:14em;">
     {% endif %}
     <h3>{{ project.title }}</h3>
     <p>{{ project.description }}</p>

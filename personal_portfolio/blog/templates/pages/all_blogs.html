@@ -1,10 +1,25 @@
-<h1> This is the Blog Page</h1>
+{% extends 'pages/base.html' %}
 
-<h2>There are {{ total }} blog{{ total|pluralize }} in total.</h2>
+{% load static %}
+
+{% block content %}
+
+<h1 id="blogtitle" class="font-weight-bold text-center">Blog Page</h1>
+
+<h3>There are {{ total }} blog{{ total|pluralize }} in total.</h3>
+
 {% for blog in all_blogs_fields %}
-    <a href="{% url 'blog:details' blog.id %}"><h2>{{ blog.title }}</h2></a>
-    <h5>{{ blog.date|date:'d M Y' }}</h5>
-    <p>{{ blog.content|striptags|truncatechars:100 }}</p>
+<div>
+    <div>
+        <a>
+            <h2>{{ blog.title }}</h2>
+        </a>
+        <h5 class="text-muted">{{ blog.date|date:'d M Y'|upper }}</h5>
+        <h4>{{ blog.content|striptags|truncatechars:100 }}</h4>
+    </div>
+</div>
 {% endfor %}
 
+<br>
 <a href="{% url 'home' %}">Home</a>
+{% endblock %}
