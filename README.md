@@ -17,4 +17,4 @@ $ git pull --depth=2 origin master
 
 
 ## Using svn
-$ svn checkout https://github.com/GinaGrg1/All-That-Django/tree/trunk/password_generator
+$ svn checkout https://github.com/GinaGrg1/All-That-Django/trunk/password_generator
